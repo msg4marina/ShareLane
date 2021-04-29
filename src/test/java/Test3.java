@@ -7,8 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
 
-public class Test2 {
-
+public class Test3 {
     @Test
     public void test2SignUp2GetLogin3GetBook4GoToSHoppingCart5AssertTotalPrice() {
         //установка переменной среды
@@ -51,3 +50,6 @@ public class Test2 {
         driver.quit();
     }
 }
+
+
+
