@@ -36,11 +36,13 @@ public class Test2 {
                     "Аккаунт не был создан");
             //забрать email
             //получить логин со страницы (локатор By.xpath("(//b)[2]")
-            driver.findElement(By.xpath("(//b)[2]")).getText();
-            //залогиниться, нажав на кнопку here
+            String email = driver.findElement(By.xpath("(//b)[2]")).getText();
+            driver.get("http://sharelane.com/cgi-bin/main.py");
+            driver.findElement(By.name("email")).sendKeys(email);
+             //залогиниться, нажав на кнопку here
             driver.findElement(By.xpath("//a[contains(@href,'main.py')]")).click();
-            //ввести Email любой, взятый с https://sharelane.com/users.html (например olga_gupta@414.52.sharelane.com	)
-            driver.findElement(By.name("email")).sendKeys("olga_gupta@414.52.sharelane.com\t");
+            //ввести email
+            driver.findElement(By.name("email")).sendKeys("email");
             //ввести Password
             driver.findElement(By.name("password")).sendKeys("1111");
             //нажать кнопку Login
